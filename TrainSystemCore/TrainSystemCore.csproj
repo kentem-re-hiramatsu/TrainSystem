@@ -41,6 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Consts.cs" />
     <Compile Include="Enums\SeatType.cs" />
     <Compile Include="Managers\TrainManager.cs" />
     <Compile Include="Models\ExpressTrain.cs" />
