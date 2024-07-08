@@ -1,4 +1,5 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+using System;
 using TrainSystemCore.Enums;
 using TrainSystemCore.Models;
 
@@ -56,6 +57,21 @@ namespace TrainSystemTest.ModelTest
             var TotalPrice = adultPrice + childrenPrice;
 
             Assert.AreEqual(TotalPrice, normalTrrain.GetPrice());
+        }
+
+        [TestMethod]
+        public void InputErrorTest()
+        {
+            var expressTrain = new NormalTrain(1, 1, SeatType.グリーン指定);
+
+            Assert.AreEqual(1, expressTrain.AdultCount);
+            Assert.AreEqual(1, expressTrain.ChildrenCount);
+
+            Assert.ThrowsException<Exception>(() => new NormalTrain(0, 3, SeatType.グリーン指定));
+            Assert.ThrowsException<Exception>(() => new NormalTrain(-1, 3, SeatType.グリーン指定));
+
+            Assert.ThrowsException<Exception>(() => new NormalTrain(3, 0, SeatType.グリーン指定));
+            Assert.ThrowsException<Exception>(() => new NormalTrain(3, -1, SeatType.グリーン指定));
         }
     }
 }
