@@ -43,6 +43,8 @@
   <ItemGroup>
     <Compile Include="Consts.cs" />
     <Compile Include="Enums\SeatType.cs" />
+    <Compile Include="Enums\TrainType.cs" />
+    <Compile Include="Managers\TrainManager.cs" />
     <Compile Include="Managers\UserManager.cs" />
     <Compile Include="Models\ExpressTrain.cs" />
     <Compile Include="Models\LimetedExpressTrain.cs" />
