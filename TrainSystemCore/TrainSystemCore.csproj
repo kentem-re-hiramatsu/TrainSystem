@@ -43,11 +43,12 @@
   <ItemGroup>
     <Compile Include="Consts.cs" />
     <Compile Include="Enums\SeatType.cs" />
-    <Compile Include="Managers\TrainManager.cs" />
+    <Compile Include="Managers\UserManager.cs" />
     <Compile Include="Models\ExpressTrain.cs" />
     <Compile Include="Models\LimetedExpressTrain.cs" />
     <Compile Include="Models\NormalTrain.cs" />
     <Compile Include="Models\Train.cs" />
+    <Compile Include="Models\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
