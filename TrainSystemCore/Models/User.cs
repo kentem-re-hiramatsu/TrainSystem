@@ -11,7 +11,7 @@ namespace TrainSystemCore.Models
 
         public User(string name, int adultCount, int childrenCount, Train trainType)
         {
-            if (adultCount > 0 && childrenCount > 0)
+            if (adultCount > -1 && childrenCount > -1)
             {
                 Name = name;
                 AdultCount = adultCount;
