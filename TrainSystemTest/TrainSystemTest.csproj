@@ -49,6 +49,7 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ManagerTest\TrainManagerTest.cs" />
     <Compile Include="ModelTest\ExpressTrainTest.cs" />
     <Compile Include="ModelTest\LimetedExpressTrainTest.cs" />
     <Compile Include="ModelTest\NormalTrainTest.cs" />
