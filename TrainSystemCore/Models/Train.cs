@@ -1,5 +1,4 @@
-﻿using System;
-using TrainSystemCore.Enums;
+﻿using TrainSystemCore.Enums;
 
 namespace TrainSystemCore.Models
 {
@@ -8,27 +7,15 @@ namespace TrainSystemCore.Models
         public string Name { get; protected set; }
         public int Price { get; protected set; }
         public SeatType SeatType { get; }
-        public int AdultCount { get; set; }
-        public int ChildrenCount { get; set; }
 
-        public Train(int adultCount, int childrenCount, SeatType seatType)
+        public Train(SeatType seatType)
         {
-            if (adultCount > 0 && childrenCount > 0)
-            {
-                AdultCount = adultCount;
-                ChildrenCount = childrenCount;
-                SeatType = seatType;
-            }
-            else
-            {
-                throw new Exception(Consts.INPUT_COUNT_ERROR_MESSAGE);
-            }
+            SeatType = seatType;
         }
 
-        public int GetPrice()
+        public int GetTrainPrice()
         {
-            int price = Price + (int)SeatType;
-            return price * AdultCount + price / 2 * ChildrenCount;
+            return Price + (int)SeatType;
         }
     }
 }

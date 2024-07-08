@@ -7,7 +7,7 @@ namespace TrainSystemCore.Models
         private const string NAME = "特急列車";
         private const int PRICE = 2000;
 
-        public LimetedExpressTrain(int adultCount, int childrenCount, SeatType seatType) : base(adultCount, childrenCount, seatType)
+        public LimetedExpressTrain(SeatType seatType) : base(seatType)
         {
             Name = NAME;
             Price = PRICE;

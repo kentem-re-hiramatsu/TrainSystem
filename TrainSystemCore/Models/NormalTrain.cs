@@ -7,7 +7,7 @@ namespace TrainSystemCore.Models
         private const string NAME = "普通列車";
         private const int PRICE = 1000;
 
-        public NormalTrain(int adultCount, int childrenCount, SeatType seatType) : base(adultCount, childrenCount, seatType)
+        public NormalTrain(SeatType seatType) : base(seatType)
         {
             Name = NAME;
             Price = PRICE;
