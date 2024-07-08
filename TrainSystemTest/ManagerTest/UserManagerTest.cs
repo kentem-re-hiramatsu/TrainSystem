@@ -8,6 +8,7 @@ namespace TrainSystemTest.ManagerTest
     [TestClass]
     public class UserManagerTest
     {
+        //ユーザーの追加テスト
         [TestMethod]
         public void AddTest()
         {
@@ -35,6 +36,7 @@ namespace TrainSystemTest.ManagerTest
             Assert.AreEqual(SeatType.指定, userMana.Get(1).TrainType.SeatType);
         }
 
+        //合計金額のテスト
         [TestMethod]
         public void GetTotalPriceTest()
         {

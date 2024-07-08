@@ -7,6 +7,7 @@ namespace TrainSystemTest.ModelTest
     [TestClass]
     public class LimetedExpressTrainTest
     {
+        //普通座席のテスト
         [TestMethod]
         public void NormalSeatTest()
         {
@@ -19,6 +20,7 @@ namespace TrainSystemTest.ModelTest
             Assert.AreEqual(trainAndSeatPrice, limetedExpressTrrain.GetTrainPrice());
         }
 
+        //指定座席のテスト
         [TestMethod]
         public void SpecifiedSeatTest()
         {
@@ -31,6 +33,7 @@ namespace TrainSystemTest.ModelTest
             Assert.AreEqual(trainAndSeatPrice, limetedExpressTrrain.GetTrainPrice());
         }
 
+        //グリーン指定座席のテスト
         [TestMethod]
         public void GreenSpecifiedSeatTest()
         {

@@ -8,6 +8,7 @@ namespace TrainSystemTest.ManagerTest
     [TestClass]
     public class TrainManagerTest
     {
+        //電車の取得のテスト
         [TestMethod]
         public void GetTrainTest()
         {

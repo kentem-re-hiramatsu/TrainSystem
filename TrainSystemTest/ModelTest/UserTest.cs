@@ -8,6 +8,7 @@ namespace TrainSystemTest.ModelTest
     [TestClass]
     public class UserTest
     {
+        //コンストラクタのテスト
         [TestMethod]
         public void ConstructorTest()
         {

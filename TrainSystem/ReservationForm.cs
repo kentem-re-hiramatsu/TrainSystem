@@ -8,16 +8,20 @@ namespace TrainSystem
 {
     public partial class ReservationForm : Form
     {
+        //メンバ変数
         private UserManager _userMana;
 
+        //コンストラクタ
         public ReservationForm(UserManager userManager)
         {
             InitializeComponent();
             _userMana = userManager;
         }
 
+        //Formのロード
         private void ReservationForm_Load(object sender, EventArgs e)
         {
+            //TrainComboBoxに選択肢を追加
             TrainComboBox.Items.AddRange(new object[]
             {
                 TrainType.普通列車,
@@ -25,6 +29,7 @@ namespace TrainSystem
                 TrainType.特急列車,
             });
 
+            //SeatComboBoxに選択肢を追加
             SeatComboBox.Items.AddRange(new object[]
             {
                 SeatType.普通,
@@ -33,11 +38,13 @@ namespace TrainSystem
             });
         }
 
+        //Cancelボタン
         private void CancelButton_Click(object sender, EventArgs e)
         {
             Close();
         }
 
+        //Okボタン
         private void OkButton_Click(object sender, EventArgs e)
         {
             var name = NameTextBox.Text;
@@ -50,7 +57,10 @@ namespace TrainSystem
             {
                 var train = new TrainManager().GetTrain(trainType, seatType);
                 var user = new User(name, adultCount, childrenCount, train);
+
+                //ユーザーデータを新規追加
                 _userMana.Add(user);
+
                 DialogResult = DialogResult.OK;
             }
             catch (Exception m)

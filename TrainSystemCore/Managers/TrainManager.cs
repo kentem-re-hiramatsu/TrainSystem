@@ -5,6 +5,7 @@ namespace TrainSystemCore.Managers
 {
     public class TrainManager
     {
+        //電車の取得
         public Train GetTrain(TrainType trainType, SeatType seatType)
         {
             switch (trainType)
