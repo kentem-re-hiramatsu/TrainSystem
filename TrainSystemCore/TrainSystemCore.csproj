@@ -42,6 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Enums\SeatType.cs" />
+    <Compile Include="Managers\TrainManager.cs" />
     <Compile Include="Models\ExpressTrain.cs" />
     <Compile Include="Models\LimetedExpressTrain.cs" />
     <Compile Include="Models\NormalTrain.cs" />
