@@ -1,12 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using TrainSystemCore.Enums;
 
 namespace TrainSystemCore.Models
 {
-    internal class LimetedExpressTrain
+    public class LimetedExpressTrain : Train
     {
+        private const string NAME = "特急列車";
+        private const int PRICE = 2000;
+
+        public LimetedExpressTrain(int adultCount, int childrenCount, SeatType seatType) : base(adultCount, childrenCount, seatType)
+        {
+            Name = NAME;
+            Price = PRICE;
+        }
     }
 }
