@@ -81,7 +81,7 @@
             // 
             this.TotalPriceLabel.AutoSize = true;
             this.TotalPriceLabel.Font = new System.Drawing.Font("MS UI Gothic", 10F);
-            this.TotalPriceLabel.Location = new System.Drawing.Point(336, 283);
+            this.TotalPriceLabel.Location = new System.Drawing.Point(289, 283);
             this.TotalPriceLabel.Name = "TotalPriceLabel";
             this.TotalPriceLabel.Size = new System.Drawing.Size(91, 14);
             this.TotalPriceLabel.TabIndex = 1;
@@ -95,6 +95,7 @@
             this.ReservationButton.TabIndex = 2;
             this.ReservationButton.Text = "予約";
             this.ReservationButton.UseVisualStyleBackColor = true;
+            this.ReservationButton.Click += new System.EventHandler(this.ReservationButton_Click);
             // 
             // MainForm
             // 

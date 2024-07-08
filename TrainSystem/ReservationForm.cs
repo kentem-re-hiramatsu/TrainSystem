@@ -51,6 +51,7 @@ namespace TrainSystem
                 var train = new TrainManager().GetTrain(trainType, seatType);
                 var user = new User(name, adultCount, childrenCount, train);
                 _userMana.Add(user);
+                DialogResult = DialogResult.OK;
             }
             catch (Exception m)
             {
